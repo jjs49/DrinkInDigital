@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name = "viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="static/stylesheet.css">
+
+    <title>DrinkInDigital</title>
+    <link rel="icon" type="image/x-icon" href="/static/media/favicon.jpg">
+</head>
+<header>
+    <div class="header">
+        <div class="navigationBar" >
+            <a href="/"><img src="static/media/logoWhite.png" class="logoWhite" ></a>
+            <a href="/ourWork" class="active">OUR WORK</a>
+            <a href="/aboutUs" class="menu">ABOUT US</a>
+            <a href="/contact" class ="menu">CONTACT</a>
+        </div>
+    </div>
+</header>
+<body onload="getPics()">
+
+<div class="masonry">
+    <div class="photo">
+        <img src="static/media/photos/ADARE1.jpg"/>
+    </div>
+    <div class="photo">
+        <img src="static/media/photos/ADAREMANOR.jpg"/>
+    </div>
+    <div class="photo">
+        <img src="static/media/photos/BARBERSHOP-2.jpg"/>
+    </div>
+    <div class="photo">
+        <img src="static/media/photos/BARTENDER7.jpg"/>
+    </div>
+    <div class="photo">
+        <img src="static/media/photos/DRINK3.jpg"/>
+    </div>
+    <div class="photo">
+        <img src="static/media/photos/DRURYBUILDINGS-21.jpg"/>
+    </div>
+    <div class="photo">
+        <img src="static/media/photos/DRURY-7.jpg"/>
+    </div>
+    <div class="photo">
+        <img src="static/media/photos/DRURY-37.jpg"/>
+    </div>
+    <div class="photo">
+        <img src="static/media/photos/DRURY-45.jpg"/>
+    </div>
+    <div class="photo">
+        <img src="static/media/photos/FAMILYSTRATEGY.jpg"/>
+    </div>
+    <div class="photo">
+        <img src="static/media/photos/HILLIARDS-25.jpg"/>
+    </div>
+    <div class="photo">
+        <img src="static/media/photos/HILLIARDS-90.jpg"/>
+    </div>
+    <div class="photo">
+        <img src="static/media/photos/HILLIARDS-101.jpg"/>
+    </div>
+    <div class="photo">
+        <img src="static/media/photos/HILLIARDS-111.jpg"/>
+    </div>
+    <div class="photo">
+        <img src="static/media/photos/HOSTFESTIVAL-42.jpg"/>
+    </div>
+    <div class="photo">
+        <img src="static/media/photos/HOSTFESTIVAL-151.jpg"/>
+    </div>
+    <div class="photo">
+        <img src="static/media/photos/HOSTFESTIVAL-168.jpg"/>
+    </div>
+    <div class="photo">
+        <img src="static/media/photos/ICECOLDBREW.jpg"/>
+    </div>
+    <div class="photo">
+        <img src="static/media/photos/MADRID-061.jpg"/>
+    </div>
+    <div class="photo">
+        <img src="static/media/photos/MASTERDISTILLER.jpg"/>
+    </div>
+    <div class="photo">
+        <img src="static/media/photos/PLACE7.jpg"/>
+    </div>
+    <div class="photo">
+        <img src="static/media/photos/STRAWBERRYFIELDS.jpg"/>
+    </div>
+    <div class="photo">
+        <img src="static/media/photos/TDR-52.jpg"/>
+    </div>
+    <div class="photo">
+        <img src="static/media/photos/WHISKEYSOUR.jpg"/>
+    </div>
+    <div class="photo">
+        <img src="static/media/photos/cocktail.jpg"/>
+    </div>
+</div>
+<div id="fullScreen" onclick="this.style.display='none';"></div>
+<script>
+    function getPics() {} //just for this demo
+    const imgs = document.querySelectorAll('.masonry img');
+    const fullPage = document.querySelector('#fullScreen');
+
+    imgs.forEach(img => {
+        img.addEventListener('click', function() {
+            fullPage.style.backgroundImage = 'url(' + img.src + ')';
+            fullPage.style.display = 'block';
+        });
+    });
+</script>
+
+</body>
+<footer>
+    <p>TRADEMARK BLAH BLAH BLAH</p>
+</footer>
+</html>

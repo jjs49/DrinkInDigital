@@ -6,20 +6,48 @@
     <link rel="stylesheet" href="static/stylesheet.css">
 
     <title>DrinkInDigital</title>
-    <link rel="icon" type="image/x-icon" href="/static/media/favicon.jpg">
+    <link rel="icon" type="image/x-icon" href="/static/media/digitalLogo.png">
 </head>
-<header>
-    <div class="header">
-        <div class="navigationBar" >
-            <a href="/"><img src="static/media/logoWhite.png" class="logoWhite" ></a>
-            <a href="/ourWork" class="active">OUR WORK</a>
-            <a href="/aboutUs" class="menu">ABOUT US</a>
-            <a href="/contact" class ="menu">CONTACT</a>
-        </div>
-    </div>
-</header>
-<body onload="getPics()">
 
+<div class="navigationBar" id="pages">
+    <a href="/"><img src="static/media/digitalLogo.png" class="logo" ></a>
+<!--    <div class="dropdown">-->
+<!--        <button class="dropbtn" id="active">OUR WORK-->
+<!--            <i class="fa fa-caret-down"></i>-->
+<!--        </button>-->
+<!--        <div class="dropdown-content">-->
+<!--            <a href="ourWorkPhotos">PHOTOGRAPHY</a>-->
+<!--            <a href="ourWorkVideos">FILMOGRAPHY</a>-->
+<!--        </div>-->
+<!--    </div>-->
+    <a href="/ourWork" class="active">OUR WORK</a>
+    <a href="/aboutUs" class="menu">ABOUT</a>
+    <a href="/contact" class ="menu">CONTACT</a>
+</div>
+</header>
+<div class="videoScroller toggle">
+    <div class="videoElement">
+        <video autoplay muted loop controls>
+            <source src="static/media/videos/6HOSTFEST.mp4" type="video/mp4">
+        </video>
+        <h2>Jameson Host Festival</h2>
+    </div>
+    <div class="videoElement">
+        <video autoplay muted loop controls>
+            <source src="static/media/videos/JAMESON_SEQUENZA_mod_1.mp4" type="video/mp4">
+        </video>
+        <h2>Jameson Black Barrel</h2>
+    </div>
+    <div class="videoElement">
+        <video autoplay muted loop controls>
+            <source src="static/media/videos/RYANUNPLUGGED.mp4" type="video/mp4">
+        </video>
+        <h2>Ryan Unplugged</h2>
+    </div>
+</div>
+
+<section class="whiteBackground">
+    <h1>PHOTOGRAPHY</h1>
 <div class="masonry">
     <div class="photo">
         <img src="static/media/photos/ADARE1.jpg"/>
@@ -97,9 +125,9 @@
         <img src="static/media/photos/cocktail.jpg"/>
     </div>
 </div>
+</section>
 <div id="fullScreen" onclick="this.style.display='none';"></div>
 <script>
-    function getPics() {} //just for this demo
     const imgs = document.querySelectorAll('.masonry img');
     const fullPage = document.querySelector('#fullScreen');
 
@@ -110,9 +138,14 @@
         });
     });
 </script>
-
+<div class="endPage">
+    <h3>CARRER DE MARGALIDA CAIMARI 5, MALLORCA, SPAIN</h3>
+    <h3>141 NORTH KING STREET DUBLIN 7, IRELAND</h3>
+    <h3>+353 (0) 1 561 7799</h3>
+    <h3>CUSTOMERCARE@DRINKIN.EU</h3>
+</div>
 </body>
 <footer>
-    <p>TRADEMARK BLAH BLAH BLAH</p>
+    <a href="https://instagram.com/drinkin.digital?igshid=YmMyMTA2M2Y="><img src="static/media/instagramIcon.png" class="icon" height="30px" width="auto"></a>
 </footer>
 </html>

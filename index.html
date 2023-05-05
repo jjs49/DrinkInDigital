@@ -6,34 +6,73 @@
     <link rel="stylesheet" href="static/stylesheet.css">
 
     <title>DrinkInDigital</title>
-    <link rel="icon" type="image/x-icon" href="/static/media/favicon.jpg">
+    <link rel="icon" type="image/x-icon" href="/static/media/digitalLogo.png">
 </head>
 <header>
-<!--    <div class="content">-->
-<!--        <div class="navigationBar" >-->
-<!--            <a href="/"><img src="static/media/logoWhite.png" class="logoWhite" ></a>-->
-<!--            <a href="/ourWork.html" class="menu">OUR WORK</a>-->
-<!--            <a href="/aboutUs.html" class="menu">ABOUT US</a>-->
-<!--            <a href="/contact.html" class ="menu">CONTACT</a>-->
-<!--        </div>-->
-<!--    </div>-->
 </header>
 <body>
-<video autoplay muted loop id = "homePageClip">
+<section class="darkBackground">
+<video autoplay muted loop id = "homePageClip" onclick="myFunction()">
     <source src="static/media/HomepageClip.mp4" type="video/mp4">
 </video>
 
+<div class="video-title"><b>Digital Irish Storytellers</b></div>
 
-    <div class="navigationBar" >
-        <a href="/"><img src="static/media/logoWhite.png" class="logoWhite" ></a>
-        <a href="/ourWork" class="menu">OUR WORK</a>
-        <a href="/aboutUs" class="menu">ABOUT US</a>
-        <a href="/contact" class ="menu">CONTACT</a>
+
+<div class="navigationBar" >
+    <a href="/"><img src="static/media/digitalLogo.png" class="logo" ></a>
+    <a href="/ourWork" class="menu">OUR WORK</a>
+    <a href="/aboutUs" class="menu">ABOUT</a>
+    <a href="/contact" class ="menu">CONTACT</a>
+</div>
+</section>
+
+<section class="whiteBackground">
+    <div class="homeContent">
+    <p>As a team of passionate creatives, we are driven by a profound dedication for crafting
+        brand experiences for the hospitality industry.</p>
+    <p>Our aim has always been to create content that connects and resonates with people.</p>
+    <p>Whether we're filming in a bustling bar or generating content for a bold new concept, our
+        vision has always been clear: we create to inspire. We take great pride in establishing
+        strong partnerships with the brands we collaborate with, empowering them to expand
+        their horizons and reach new heights. And in doing so, we elevate ourselves and our
+        agency to new levels of constant improvement.</p>
+    <p>Drink In Digital.</p>
+        <p>As a team of passionate creatives, we are driven by a profound dedication for crafting
+            brand experiences for the hospitality industry.</p>
+        <p>Our aim has always been to create content that connects and resonates with people.</p>
+        <p>Whether we're filming in a bustling bar or generating content for a bold new concept, our
+            vision has always been clear: we create to inspire. We take great pride in establishing
+            strong partnerships with the brands we collaborate with, empowering them to expand
+            their horizons and reach new heights. And in doing so, we elevate ourselves and our
+            agency to new levels of constant improvement.</p>
+        <p>Drink In Digital.</p>
     </div>
+</section>
+
+<div class="endPage">
+        <h3>CARRER DE MARGALIDA CAIMARI 5, MALLORCA, SPAIN</h3>
+        <h3>141 NORTH KING STREET DUBLIN 7, IRELAND</h3>
+        <h3>+353 (0) 1 561 7799</h3>
+        <h3>CUSTOMERCARE@DRINKIN.EU</h3>
+</div>
+<script>
+    var video = document.getElementById("homePageClip");
+    function myFunction() {
+        if (video.paused) {
+            video.play();
+            btn.innerHTML = "Pause";
+        } else {
+            video.pause();
+            btn.innerHTML = "Play";
+        }
+    }
+</script>
 
 
 </body>
+
 <footer>
-    <p>TRADEMARK BLAH BLAH BLAH</p>
+    <a href="https://instagram.com/drinkin.digital?igshid=YmMyMTA2M2Y="><img src="static/media/instagramIcon.png" class="icon" height="30px" width="auto"></a>
 </footer>
 </html>

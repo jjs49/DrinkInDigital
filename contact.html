@@ -6,17 +6,31 @@
     <link rel="stylesheet" href="static/stylesheet.css">
 
     <title>DrinkInDigital</title>
-    <link rel="icon" type="image/x-icon" href="/static/media/favicon.jpg">
+    <link rel="icon" type="image/x-icon" href="/static/media/digitalLogo.png">
 </head>
 <header>
-    <div class="header">
-        <div class="navigationBar" >
-            <a href="/"><img src="static/media/logoWhite.png" class="logoWhite" ></a>
-            <a href="/ourWork" class="menu">OUR WORK</a>
-            <a href="/aboutUs" class="menu">ABOUT US</a>
-            <a href="/contact" class ="active">CONTACT</a>
+    <div class="navigationBar" >
+        <a href="/"><img src="static/media/digitalLogo.png" class="logo" ></a>
+        <div class="dropdown">
+            <button class="dropbtn">OUR WORK +
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="ourWorkPhotos">PHOTOGRAPHY</a>
+                <a href="ourWorkVideos">FILMOGRAPHY</a>
+            </div>
         </div>
+        <a href="/aboutUs" class="menu">ABOUT</a>
+        <a href="/contact" class ="active">CONTACT</a>
     </div>
+<!--    <div class="header">-->
+<!--        <div class="navigationBar" >-->
+<!--            <a href="/"><img src="static/media/logoWhite.png" class="logoWhite" ></a>-->
+<!--            <a href="/ourWork" class="menu">OUR WORK</a>-->
+<!--            <a href="/aboutUs" class="menu">ABOUT US</a>-->
+<!--            <a href="/contact" class ="active">CONTACT</a>-->
+<!--        </div>-->
+<!--    </div>-->
 </header>
 <body>
 
@@ -34,6 +48,6 @@
 
 </body>
 <footer>
-    <p>TRADEMARK BLAH BLAH BLAH</p>
+    <a href="https://instagram.com/drinkin.digital?igshid=YmMyMTA2M2Y="><img src="static/media/instagramIcon.png" class="icon" height="30px" width="auto"></a>
 </footer>
 </html>

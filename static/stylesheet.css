@@ -1,46 +1,111 @@
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'montserrat';
     font-weight: 500;
+}
+h1{
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 30px;
 }
 
 * {
     box-sizing: border-box;
 }
 
-body {
+html,body {
     margin: 0;
-    font-family: Arial;
+    font-family: montserrat;
     font-size: 17px;
-    background-color: #333;
+    background-image: url("media/background.jpg");
+    color: #dddddd;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
-#homePageClip {
-    position: fixed;
-    width: 100%;
-    height: 100%;
+.homeContent{
+    margin-right: 50px;
+    margin-left: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.darkBackground{
+    padding-bottom: 50px;
+}
+
+#homePageClip{
+    min-height: 100%;
+
+}
+
+
+.aboutUs{
+    color: #f2f2f2;
+    margin-right: 50px;
+    margin-left: 50px;
+    position: relative;
+    padding-top: 150px;
+}
+
+.endPage{
+    padding-bottom: 100px;
+    scale: 0.8;
+}
+
+@font-face{
+    font-family:montserrat;
+    src:url(media/font/Montserrat-VariableFont_wght.ttf)
 }
 
 .header {
     position: fixed;
     top: 0;
     z-index:1;
-    background: rgba(0, 0, 0, 0.5);
+    /*background: rgba(0, 0, 0, 0.5);*/
     color: #f1f1f1;
     width: 100%;
 }
 
-.logoWhite {
+.logo {
     height: 100px;
+}
+
+.logo:hover{
+    -webkit-filter:grayscale(100%);
+    filter: grayscale(100%);
 }
 
  .navigationBar{
     overflow: auto;
     width: 100%;
-    position: absolute;
-    background-color: #333;
+    position: fixed;
+     top:0;
+     z-index:1;
 }
 
+ .navigationBar:hover{
+     background-image: url("media/background.jpg");
+     opacity: 0.8;
+ }
+
+footer:hover{
+    background-image: url("media/background.jpg");
+    opacity: 0.8;
+}
+
+footer a:hover{
+    opacity: 1;
+}
+
+footer a{
+    float: left;
+    color: #818181;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    opacity: 0.6;
+    mix-blend-mode: difference;
+}
 .navigationBar a {
     float: left;
     color: #818181;
@@ -49,13 +114,23 @@ body {
     font-size: 25px;
 }
 
+#pages{
+    background-image: url("media/background.jpg");
+    opacity: 0.8;
+}
+
 .navigationBar .menu{
     padding-top: 50px;
+}
+
+.contact{
+    position: relative;
 }
 
 
 .navigationBar a:hover {
     color: #f2f2f2;
+    transition: width 2s;
 }
 
 .navigationBar .active {
@@ -63,30 +138,18 @@ body {
     color: #f2f2f2;
 }
 
-.content{
-    padding-top: 150px;
-}
-
-.flex-container {
-    display: flex;
-    flex-direction: row;
-    -webkit-transition:1s ease all;
-    padding-bottom: 100px;
-}
-
 .teamMember {
     background-color: #818181;
-    transition: 0.5s;
-    margin-left: 10%;
-    margin-right: 10%;
+    transition: 2s;
     width:300px;
+    height: 400px;
+    display: inline-block;
+    box-sizing: border-box;
+    margin: 20px;
 }
 
 .profilePic{
-    width:300px;
-    height: auto;
-    /*-webkit-filter: grayscale(100%);*/
-    /*filter: grayscale(100%);*/
+    width:100%;
     clip: rect(0px,300px,500px,0px);
 }
 
@@ -94,7 +157,7 @@ body {
     top: 25%;
     width: 100%;
     text-align: center;
-
+    height: 400px;
 }
 
 .teamMember a {
@@ -107,22 +170,11 @@ body {
     text-align: center;
 }
 
-.teamMemberLink a {
-    text-decoration: none;
-    font-size: 36px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-    width: 40px;
-    height:40px;
-}
-
 footer{
     position: fixed;
     width: 100%;
     bottom: 0;
-    background-color:#333;
-    color: white;
+    color: #818181;
     font-size: 10px;
     padding-top: 5px;
     padding-bottom: 5px;
@@ -130,60 +182,35 @@ footer{
     text-align: center;
 }
 
-@media screen and (max-width: 850px) {
-    .flex-container {
-        padding-top: 20px;
-        flex-direction: column;
-        vertical-align:middle;
-    }
-    .teamMember {
-        margin-top: 30px;
-    }
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 50px;
 }
 
-@media screen and (max-width: 500px) {
-    .navigationBar{
-        overflow: auto;
-        width: 100%;
-        padding-top: 10px;
-        padding-bottom: 20px;
-    }
-    .navigationBar a {
-        float: none;
-        display: block;
-    }
 
-    .navigationBar .menu{
-        padding-top: 15px;
-    }
-
-    .flex-container {
-        padding-top: 175px;
-        flex-direction: column;
-        padding-bottom: 50px;
-    }
-    .navigationBar .active {
-        padding-top: 10px;
-    }
-
-}
 
 .masonry {
     -webkit-column-count: 4;
     -moz-column-count:4;
     column-count: 4;
     margin: 1.5em;
-    padding-top: 100px;
-    -moz-column-gap: 1.5em;
-    -webkit-column-gap: 1.5em;
-    column-gap: 1.5em;
+    -moz-column-gap: .3em;
+    -webkit-column-gap: .3em;
+    column-gap: .3em;
     font-size: .85em;
+    padding-bottom: 20px;
+    padding-top: 30px;
 }
+
+
 .photo {
     display: inline-block;
-    padding: 1em;
+    /*padding: 1em;*/
     box-sizing: border-box;
     width:100%;
+    transition: 2s;
 }
 
 .photo img{
@@ -220,12 +247,203 @@ h4{
     color: black;
 }
 
+.dropdown {
+    float: left;
+    overflow: hidden;
+    padding-bottom: 100px;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+    font-size: 25px;
+    border: none;
+    outline: none;
+    color: #818181;
+    padding-top: 50px;
+    /*padding: 14px 16px;*/
+    background-color: inherit;
+    font-family: inherit; /* Important for vertical align on mobile phones */
+    margin: 0; /* Important for vertical align on mobile phones */
+}
+
+#active{
+    color: #f2f2f2;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+    color: #f2f2f2;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    z-index: 10000;
+}
+
+.dropdown-content a {
+    float: none;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    font-size: 20px;
+}
+
+.dropdown-content a:hover {
+    z-index:10;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.video-title{
+    position: absolute;
+    top:80%;
+    left: 5%;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 25px;
+}
+
+.clip-title{
+    position: relative;
+    top:20%;
+    left: 10%;
+    text-transform: uppercase;
+    font-size: 25px;
+}
+
+.slide{
+    margin: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+#slider{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top:190px;
+}
+
+.videoContainer{
+    width: 100%;
+    margin: auto;
+}
+
+.sub-videoContainer{
+    width: 85%;
+    margin: auto;
+}
+
+.slide-video {
+    width: 100%;
+    height: 275px;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: 0.5s;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.endPage{
+    padding-bottom: 100px;
+    scale: 0.8;
+}
+
+video{
+    max-height: 100%;
+    width:auto;
+}
+
+.videoScroller{
+    --_spacer: 3rem;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 100%;
+    overflow-x: auto;
+    overscroll-behavior:contain;
+    gap: var(--_spacer);
+    padding-left: 10%;
+
+}
+
+.videoElement{
+    display: grid;
+    grid-template-rows: min-content;
+    gap: var(--_spacer);
+    padding: var(--_spacer);
+
+}
+.videoElement > video{
+    inline-size: min(100% - 4rem, 70rem);
+    aspect-ratio: 16/9;
+    object-fit: cover;
+}
+
+video{
+    height: 100%;
+    max-width: 100%;
+}
+
+.toggle{
+    scroll-snap-type: inline mandatory;
+    scroll-padding-inline: 10%;
+}
+
+.toggle > * {
+    scroll-snap-align: start;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+
+::-webkit-scrollbar-track {
+    width: 60%;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #555;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #888;
+}
+
+.whiteBackground{
+    background-color: white;
+    color: black;
+}
+
 @media only screen and (max-width: 320px) {
     .masonry {
         -moz-column-count: 1;
         -webkit-column-count: 1;
         column-count: 1;
-        padding-top:300px;
+    }
+    .dropdown{
+        padding-bottom: 0px;
+    }
+    .aboutUs{
+        padding-top: 400px;
+    }
+    .contact{
+        padding-top: 400px;
+    }
+    .videoScroller{
+        padding-top:400px;
+    }
+    .video-title {
+        color:black;
+        top: 20%;
     }
 }
 
@@ -234,7 +452,24 @@ h4{
         -moz-column-count: 2;
         -webkit-column-count: 2;
         column-count: 2;
-        padding-top:300px;
+    }
+    .dropdown{
+        padding-bottom: 0px;
+    }
+    .aboutUs{
+        padding-top: 300px;
+    }
+    .contact{
+        padding-top: 300px;
+    }
+    .videoScroller{
+        padding-top: 300px;
+    }
+    .video-title {
+        position: relative;
+        font-size: 20px;
+        color:white;
+        top: 40%;
     }
 }
 
@@ -243,14 +478,38 @@ h4{
         -moz-column-count: 2;
         -webkit-column-count: 2;
         column-count: 2;
-        padding-top:200px;
     }
+    .aboutUs{
+        padding-top:250px;
+    }
+    .contact{
+        padding-top: 250px;
+    }
+    .videoScroller{
+        padding-top: 250px;
+    }
+    .video-title {
+        top: 35%;
+    }
+
 }
 @media only screen and (min-width: 769px) and (max-width: 1200px){
     .masonry {
         -moz-column-count: 3;
         -webkit-column-count: 3;
         column-count: 3;
+    }
+    .aboutUs{
+        padding-top: 200px;
+    }
+    .contact{
+        padding-top: 200px;
+    }
+    .videoScroller{
+        padding-top: 200px;
+    }
+    .video-title {
+        top: 45%;
     }
 }
 @media only screen and (min-width: 1201px) {
@@ -259,4 +518,46 @@ h4{
         -webkit-column-count: 4;
         column-count: 4;
     }
+    .contact{
+        padding-top: 100px;
+    }
+    .videoScroller{
+        padding-top: 100px;
+    }
+    .video-title {
+        top: 60%;
+    }
 }
+@media screen and (max-width: 850px) {
+    .teamMember {
+        margin-top: 30px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .navigationBar{
+        overflow: auto;
+        width: 100%;
+        padding-top: 10px;
+        padding-bottom: 20px;
+    }
+    .navigationBar a {
+        float: none;
+        display: block;
+    }
+
+    .navigationBar .menu{
+        padding-top: 15px;
+    }
+
+    .navigationBar .active {
+        padding-top: 10px;
+    }
+
+}
+
+
+
+
+
+
